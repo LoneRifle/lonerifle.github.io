@@ -40,9 +40,7 @@ function About() {
   return (
     <VStack align="stretch">
       <Heading>About me</Heading>
-      <Text>
-        I&apos;m a software engineer since 2008.
-      </Text>
+      <Text>I&apos;m a software engineer since 2008.</Text>
     </VStack>
   )
 }
