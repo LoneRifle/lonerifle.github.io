@@ -92,7 +92,7 @@ function Contributions() {
           >
             <Text as="strong">Flat Data &#x2197;</Text>
           </Link>{' '}
-          - using GitHub to scrape and store data. Core
+          - using GitHub to scrape and store data. Core{' '}
           <Link
             href="https://github.com/githubocto/flat-ui/pulls?q=is%3Apr+is%3Amerged+author%3ALoneRifle"
             target="_blank"
@@ -105,7 +105,7 @@ function Contributions() {
             target="_blank"
           >
             viewer
-          </Link>
+          </Link>{' '}
           frontend state handling, enhancements for handling JSON-based column
           types
         </ListItem>
