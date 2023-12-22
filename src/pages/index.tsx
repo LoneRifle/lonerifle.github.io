@@ -1,8 +1,5 @@
 import Head from 'next/head'
 import {
-  Card,
-  CardHeader,
-  CardBody,
   Container,
   Heading,
   Text,
@@ -10,8 +7,10 @@ import {
   VStack,
   UnorderedList,
   ListItem,
+  Icon,
 } from '@chakra-ui/react'
 import { Link, Button } from '@opengovsg/design-system-react'
+import { FaGithub, FaLinkedinIn } from 'react-icons/fa'
 
 function Hero() {
   return (
@@ -24,14 +23,6 @@ function Hero() {
         </Link>
         . I build tech for public good!
       </Text>
-      <HStack>
-        <Button variant="link" href="https://github.com/LoneRifle">
-          GitHub
-        </Button>
-        <Button variant="link" href="https://www.linkedin.com/in/alwynt/">
-          LinkedIn
-        </Button>
-      </HStack>
     </VStack>
   )
 }
@@ -41,44 +32,82 @@ function About() {
     <VStack align="stretch">
       <Heading>About me</Heading>
       <Text>I&apos;m a software engineer since 2008.</Text>
-    </VStack>
-  )
-}
-
-function Skills() {
-  return (
-    <VStack align="stretch">
-      <Heading>Skills</Heading>
       <Text>
-        I work across the stack and here are the things I&apos;m comfortable at:
+        The best way to get to know me is to go where I frequent most! These
+        places have the most up-to-date information about me.
       </Text>
-      <UnorderedList>
-        <ListItem>Typescript</ListItem>
-        <ListItem>AWS</ListItem>
-        <ListItem>React</ListItem>
-        <ListItem>Node.js</ListItem>
-      </UnorderedList>
+      <HStack>
+        <Link
+          href="https://www.linkedin.com/in/alwynt/"
+          _hover={{ textTransform: 'none' }}
+          target="_blank"
+        >
+          <Button colorScheme="linkedin" leftIcon={<Icon as={FaLinkedinIn} />}>
+            LinkedIn
+          </Button>
+        </Link>
+        <Link
+          href="https://github.com/LoneRifle"
+          _hover={{ textTransform: 'none' }}
+          target="_blank"
+        >
+          <Button color="white" bg="black" leftIcon={<Icon as={FaGithub} />}>
+            GitHub
+          </Button>
+        </Link>
+      </HStack>
     </VStack>
   )
 }
 
-function Projects() {
+function Preferences() {
   return (
     <VStack align="stretch">
-      <Heading>Projects</Heading>
-      <Text>Here are some projects that I have worked on:</Text>
+      <Heading>Preferences</Heading>
+      <Text>I prefer backend engineering work.</Text>
+    </VStack>
+  )
+}
+
+function Contributions() {
+  return (
+    <VStack align="stretch">
+      <Heading>Public Contributions</Heading>
+      <Text>I have contributed to these projects and more:</Text>
       <UnorderedList>
         <ListItem>
-          <Text as="b">Project X</Text> - I was the frontend engineer that was
-          working on the backend of Project X
+          <Link
+            href="https://github.com/hazelcast/hazelcast/issues?q=label%3A%22Source%3A+Community%22+author%3ALoneRifle+is%3Amerged"
+            target="_blank"
+          >
+            <Text as="strong">Hazelcast &#x2197;</Text>
+          </Link>{' '}
+          - core changes to distributed in-memory key-value store similar to
+          Redis
         </ListItem>
         <ListItem>
-          <Text as="b">Project Y</Text> - I was the backend engineer that was
-          working on the backend of Project Y
-        </ListItem>
-        <ListItem>
-          <Text as="b">Project Z</Text> - I was the infrastructure engineer that
-          was working on the backend of Project Z
+          <Link
+            href="https://githubnext.com/projects/flat-data/"
+            target="_blank"
+          >
+            <Text as="strong">Flat Data &#x2197;</Text>
+          </Link>{' '}
+          - using GitHub to scrape and store data. Core
+          <Link
+            href="https://github.com/githubocto/flat-ui/pulls?q=is%3Apr+is%3Amerged+author%3ALoneRifle"
+            target="_blank"
+          >
+            UI
+          </Link>{' '}
+          and{' '}
+          <Link
+            href="https://github.com/githubocto/flat-viewer/pulls?q=is%3Apr+is%3Amerged+author%3ALoneRifle"
+            target="_blank"
+          >
+            viewer
+          </Link>
+          frontend state handling, enhancements for handling JSON-based column
+          types
         </ListItem>
       </UnorderedList>
     </VStack>
@@ -105,8 +134,8 @@ export default function PortfolioPage() {
         <VStack align="stretch" spacing={8}>
           <Hero />
           <About />
-          <Skills />
-          <Projects />
+          <Preferences />
+          <Contributions />
         </VStack>
       </Container>
     </>
