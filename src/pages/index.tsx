@@ -25,11 +25,11 @@ function Hero() {
         . I build tech for public good!
       </Text>
       <HStack>
-        <Button variant="link" href="https://github.com">
-          Github
+        <Button variant="link" href="https://github.com/LoneRifle">
+          GitHub
         </Button>
-        <Button variant="link" href="https://linkedin.com">
-          Linkedin
+        <Button variant="link" href="https://www.linkedin.com/in/alwynt/">
+          LinkedIn
         </Button>
       </HStack>
     </VStack>
@@ -41,10 +41,7 @@ function About() {
     <VStack align="stretch">
       <Heading>About me</Heading>
       <Text>
-        Hi there! I&apos;m a full stack software engineer with over 5 years of
-        experience in developing web applications. I have a strong background in
-        both front-end and back-end development, and I&apos;m passionate about
-        building scalable and efficient systems.
+        I&apos;m a software engineer since 2008.
       </Text>
     </VStack>
   )
@@ -55,7 +52,7 @@ function Skills() {
     <VStack align="stretch">
       <Heading>Skills</Heading>
       <Text>
-        I work across the stack and herer are the things I&apos;m comfortable
+        I work across the stack and here are the things I&apos;m comfortable
         at:
       </Text>
       <UnorderedList>
