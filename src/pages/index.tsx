@@ -50,8 +50,7 @@ function Skills() {
     <VStack align="stretch">
       <Heading>Skills</Heading>
       <Text>
-        I work across the stack and here are the things I&apos;m comfortable
-        at:
+        I work across the stack and here are the things I&apos;m comfortable at:
       </Text>
       <UnorderedList>
         <ListItem>Typescript</ListItem>
