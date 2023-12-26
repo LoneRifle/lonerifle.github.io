@@ -60,15 +60,6 @@ function About() {
   )
 }
 
-function Preferences() {
-  return (
-    <VStack align="stretch">
-      <Heading>Preferences</Heading>
-      <Text>I prefer backend engineering work.</Text>
-    </VStack>
-  )
-}
-
 function Contributions() {
   return (
     <VStack align="stretch">
@@ -92,7 +83,7 @@ function Contributions() {
           >
             <Text as="strong">Flat Data &#x2197;</Text>
           </Link>{' '}
-          - using GitHub to scrape and store data. Core{' '}
+          - using GitHub to scrape and store data. Worked on{' '}
           <Link
             href="https://github.com/githubocto/flat-ui/pulls?q=is%3Apr+is%3Amerged+author%3ALoneRifle"
             target="_blank"
@@ -108,6 +99,39 @@ function Contributions() {
           </Link>{' '}
           frontend state handling, enhancements for handling JSON-based column
           types
+        </ListItem>
+      </UnorderedList>
+    </VStack>
+  )
+}
+
+function CommunityWork() {
+  return (
+    <VStack align="stretch">
+      <Heading>Community Work</Heading>
+      <Text>
+        I am active in the tech community in Singapore, being present at:
+      </Text>
+      <UnorderedList>
+        <ListItem>
+          <Link href="https://t.me/projectintern" target="_blank">
+            <Text as="strong">Project Intern &#x2197;</Text>
+          </Link>{' '}
+          - Telegram group for career advice, for undergraduates and early
+          career professionals in tech
+        </ListItem>
+        <ListItem>
+          <Link href="https://geekbrunch.sg" target="_blank">
+            <Text as="strong">GeekBrunch &#x2197;</Text>
+          </Link>{' '}
+          - semi-annual breakfast gathering for members of the tech community
+        </ListItem>
+        <ListItem>
+          <Link href="https://build.gov.sg" target="_blank">
+            <Text as="strong">Build for Good &#x2197;</Text>
+          </Link>{' '}
+          - hackathon and community platform to give citizens the chance to
+          tackle problems in Singapore
         </ListItem>
       </UnorderedList>
     </VStack>
@@ -134,8 +158,8 @@ export default function PortfolioPage() {
         <VStack align="stretch" spacing={8}>
           <Hero />
           <About />
-          <Preferences />
           <Contributions />
+          <CommunityWork />
         </VStack>
       </Container>
     </>
